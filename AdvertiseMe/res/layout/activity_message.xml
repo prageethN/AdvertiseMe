@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2011 Wglxy.com Licensed under the Apache License, Version 
+	2.0 (the "License"); you may not use this file except in compliance with 
+	the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent" android:background="@color/white">
+	<LinearLayout style="@style/TitleBar">
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_home" android:src="@drawable/title_home"
+			android:onClick="onClickHome" />
+
+		<ImageView style="@style/TitleBarSeparator" />
+		<TextView style="@style/TitleBarText" />
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_about" android:src="@drawable/title_about"
+			android:onClick="onClickAbout" />
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_search" android:src="@drawable/title_search"
+			android:onClick="onClickSearch" />
+	</LinearLayout>
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:background="@color/back_gray" >
+
+
+		<TextView style="@style/TitleBarText" android:layout_margin="5dip"
+			android:text="2 of 3"
+			android:layout_gravity="center" android:textColor="@color/white" android:id="@+id/txtMessageIndex"/>
+		<ImageButton style="@style/MessageUpDown"
+			android:layout_gravity="right" android:onClick="onClickUp"
+			android:src="@drawable/selecter_btn_messageup" android:id="@+id/btnUp" android:visibility="invisible"/>
+		<ImageButton style="@style/MessageUpDown"
+			android:layout_marginRight="10dip" android:layout_gravity="right"
+			android:onClick="onClickDown" android:src="@drawable/selecter_btn_messagedown" android:id="@+id/btnDown"  android:visibility="invisible"/>
+	</LinearLayout>
+	<View android:id="@+id/divider" android:background="@drawable/gradient_bg"
+		android:layout_width="fill_parent" android:layout_height="6dp" />
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:background="@drawable/selecter_row_sender"
+		android:orientation="horizontal" android:padding="5dip" android:clickable="true" android:id="@+id/rlSenderProfile"
+		android:onClick="onClickSenderProfile">
+
+		<!-- ListRow Left sied Thumbnail image -->
+		<LinearLayout android:id="@+id/thumbnail"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:padding="3dip" android:layout_alignParentLeft="true"
+			android:background="@drawable/image_background"
+			android:layout_marginRight="5dip">
+
+			<ImageView android:layout_width="50dip" android:layout_height="50dip"
+				android:src="@drawable/img" android:id="@+id/list_image"/>
+
+		</LinearLayout>
+
+		<!-- Title Of Song -->
+		<TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:layout_alignTop="@+id/thumbnail" android:layout_toRightOf="@+id/thumbnail"
+			android:text="Dinusha87" android:textStyle="bold" android:textColor="@color/white"
+			android:textSize="14sp" android:layout_marginTop="10dip" android:id="@+id/textSenderName"/>
+		<!-- Seller feedback -->
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_below="@+id/textSenderName" android:textColor="@color/title_background"
+			android:textSize="14sp" android:layout_marginTop="5dip"
+			android:layout_toRightOf="@+id/thumbnail" android:text="Peradeniya,Central,Sri Lanka" android:id="@+id/textSenderLocation"/>
+		<ImageView android:id="@+id/imageview1" android:layout_below="@+id/textSenderName"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/icn_next_white" android:layout_marginLeft="50dip"
+			android:layout_alignParentRight="true" android:layout_toRightOf="@+id/textSenderLocation"
+			 />
+
+	</RelativeLayout>
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:padding="5dip" android:layout_marginBottom="5dip">
+
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="Hey check this out" android:textStyle="bold" android:textColor="@color/black"
+			android:textSize="14sp" android:layout_marginTop="10dip" android:id="@+id/textMessageTopic"/>
+		<!-- Seller feedback -->
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_below="@+id/textMessageTopic" android:textColor="@color/back_gray"
+			android:textSize="14sp" android:layout_marginTop="5dip"
+			android:layout_toRightOf="@+id/thumbnail" android:text="Sept 17, 2012 9:40 A.M" android:id="@+id/textMessageDate"/>
+		<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:textColor="@color/title_background" android:textSize="14sp"
+			android:layout_marginTop="5dip" android:layout_alignParentRight="true"
+			android:layout_below="@+id/textMessageTopic" android:gravity="right"
+			android:layout_toRightOf="@+id/textMessageDate" android:text="Mark unread"
+			android:onClick="onClickMarkUnread" android:id="@+id/btnMarkUnread"/>
+
+	</RelativeLayout>
+	<View android:id="@+id/divider" android:background="@drawable/black_white_gradient"
+		android:layout_width="fill_parent" android:layout_height="1dp" />
+	<RelativeLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+
+		<TextView android:text="@string/message" android:layout_width="match_parent" android:layout_height="wrap_content"
+			android:layout_margin="5dip" android:id="@+id/txtMessageContent"/>
+		<LinearLayout android:orientation="horizontal"
+			android:layout_alignParentBottom="true" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:background="@drawable/bg_action_panel" >
+			<ImageButton android:id="@+id/btnMessageSave" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:src="@drawable/selecter_btn_messagesave" android:layout_weight="1"  android:background="@drawable/bg_action_panel" android:onClick="onClickSave"/>
+				<ImageButton android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:src="@drawable/selecter_btn_messagedelete" android:layout_weight="1"  android:background="@drawable/bg_action_panel" android:id="@+id/btnMessageDelete" android:onClick="onClickDelete"/>
+				<ImageButton android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:src="@drawable/selecter_btn_messagereply" android:layout_weight="1"  android:background="@drawable/bg_action_panel" android:id="@+id/btnMessageReply" android:onClick="onClickReply"/>
+				<ImageButton android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:src="@drawable/selecter_btn_messagenew" android:layout_weight="1"  android:background="@drawable/bg_action_panel" android:id="@+id/btnMessageNew" android:onClick="onClickNew"/>
+
+		</LinearLayout>
+	</RelativeLayout>
+
+</LinearLayout>

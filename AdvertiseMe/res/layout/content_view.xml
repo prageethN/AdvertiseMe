@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:padding="4dip" android:gravity="center_horizontal"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical" android:background="@color/white">
+<TextView android:id="@+id/text" 
+		android:layout_height="wrap_content" android:layout_gravity="left"
+		android:layout_width="wrap_content" />
+	<LinearLayout android:id="@+id/lnWatching" android:layout_height="wrap_content" android:background="@drawable/rounded_corner_bg" android:orientation="vertical" android:layout_width="fill_parent" android:layout_margin="5dip">
+		<LinearLayout android:layout_height="wrap_content" android:layout_weight="100" android:background="@drawable/list_select_bg_blue" android:orientation="horizontal" android:paddingBottom="10dip" android:layout_width="match_parent" android:paddingTop="5dip" android:clickable="true" android:layout_margin="5dip" android:paddingRight="10dip" android:paddingLeft="8dip" android:id="@+id/lnWishList">
+			<ImageView android:layout_height="50dip" android:layout_width="50dip" android:src="@drawable/icn_minimized"></ImageView>
+			<TextView  android:gravity="center|left" android:layout_width="fill_parent" android:padding="5dip" android:textSize="14sp" android:layout_height="fill_parent" android:textColor="#343434" android:text="Wish List  (10)"></TextView>
+		</LinearLayout>
+		<View android:layout_height="1dp" android:layout_width="fill_parent" android:layout_marginLeft="5dip" android:background="@color/gray_start" android:id="@+id/divider" android:layout_marginRight="5dip"></View>
+		<LinearLayout android:layout_height="wrap_content" android:layout_weight="100" android:background="@drawable/list_select_bg_blue" android:orientation="horizontal" android:paddingBottom="10dip" android:layout_width="match_parent" android:paddingTop="5dip" android:clickable="true" android:layout_margin="5dip" android:paddingRight="10dip" android:paddingLeft="8dip" android:id="@+id/lnActive">
+			<ImageView android:layout_height="50dip" android:layout_width="50dip" android:src="@drawable/icn_minimized"></ImageView>
+			<TextView  android:gravity="center|left" android:layout_width="fill_parent" android:padding="5dip" android:textSize="14sp" android:layout_height="fill_parent" android:textColor="#343434" android:text="Active  (4)" ></TextView>
+		</LinearLayout>
+		<View android:layout_height="1dp" android:layout_width="fill_parent" android:layout_marginLeft="5dip" android:background="@color/gray_start" android:id="@+id/divider" android:layout_marginRight="5dip"></View>
+		<LinearLayout android:layout_height="wrap_content" android:layout_weight="100" android:background="@drawable/list_select_bg_blue" android:orientation="horizontal" android:paddingBottom="10dip" android:layout_width="match_parent" android:paddingTop="5dip" android:clickable="true" android:layout_margin="5dip" android:paddingRight="10dip" android:paddingLeft="8dip" android:id="@+id/lnOffers">
+			<ImageView android:layout_height="50dip" android:layout_width="50dip" android:src="@drawable/icn_minimized"></ImageView>
+			<TextView  android:gravity="center|left" android:layout_width="fill_parent" android:padding="5dip" android:textSize="14sp" android:layout_height="fill_parent" android:textColor="#343434" android:text="Offeres  (2)"></TextView>
+		</LinearLayout>
+	</LinearLayout>
+ 
+<LinearLayout android:id="@+id/lnSelling" android:layout_height="wrap_content" android:background="@drawable/rounded_corner_bg" android:orientation="vertical" android:layout_width="fill_parent" android:layout_margin="5dip">
+		<LinearLayout android:layout_height="wrap_content" android:layout_weight="100" android:background="@drawable/list_select_bg_blue" android:orientation="horizontal" android:paddingBottom="10dip" android:layout_width="match_parent" android:paddingTop="5dip" android:clickable="true" android:layout_margin="5dip" android:paddingRight="10dip" android:paddingLeft="8dip" android:id="@+id/lnActiveListing">
+			<ImageView android:layout_height="50dip" android:layout_width="50dip" android:src="@drawable/icn_minimized"></ImageView>
+			<TextView  android:gravity="center|left" android:layout_width="fill_parent" android:padding="5dip" android:textSize="14sp" android:layout_height="fill_parent" android:textColor="#343434" android:text="Active Listing  (18)"></TextView>
+		</LinearLayout>
+		<View android:layout_height="1dp" android:layout_width="fill_parent" android:layout_marginLeft="5dip" android:background="@color/gray_start" android:id="@+id/divider" android:layout_marginRight="5dip"></View>
+		<LinearLayout android:layout_height="wrap_content" android:layout_weight="100" android:background="@drawable/list_select_bg_blue" android:orientation="horizontal" android:paddingBottom="10dip" android:layout_width="match_parent" android:paddingTop="5dip" android:clickable="true" android:layout_margin="5dip" android:paddingRight="10dip" android:paddingLeft="8dip" android:id="@+id/lnPending">
+			<ImageView android:layout_height="50dip" android:layout_width="50dip" android:src="@drawable/icn_minimized"></ImageView>
+			<TextView  android:gravity="center|left" android:layout_width="fill_parent" android:padding="5dip" android:textSize="14sp" android:layout_height="fill_parent" android:textColor="#343434" android:text="Pending best offers  (4)"></TextView>
+		</LinearLayout>
+		<View android:layout_height="1dp" android:layout_width="fill_parent" android:layout_marginLeft="5dip" android:background="@color/gray_start" android:id="@+id/divider" android:layout_marginRight="5dip"></View>
+		<LinearLayout android:layout_height="wrap_content" android:layout_weight="100" android:background="@drawable/list_select_bg_blue" android:orientation="horizontal" android:paddingBottom="10dip" android:layout_width="match_parent" android:paddingTop="5dip" android:clickable="true" android:layout_margin="5dip" android:paddingRight="10dip" android:paddingLeft="8dip" android:id="@+id/lnExpired">
+			<ImageView android:layout_height="50dip" android:layout_width="50dip" android:src="@drawable/icn_minimized"></ImageView>
+			<TextView  android:gravity="center|left" android:layout_width="fill_parent" android:padding="5dip" android:textSize="14sp" android:layout_height="fill_parent" android:textColor="#343434" android:text="Expired  (1)"></TextView>
+		</LinearLayout>
+		<View android:layout_height="1dp" android:layout_width="fill_parent" android:layout_marginLeft="5dip" android:background="@color/gray_start" android:id="@+id/divider" android:layout_marginRight="5dip"></View>
+		<LinearLayout android:layout_height="wrap_content" android:layout_weight="100" android:background="@drawable/list_select_bg_blue" android:orientation="horizontal" android:paddingBottom="10dip" android:layout_width="match_parent" android:paddingTop="5dip" android:clickable="true" android:layout_margin="5dip" android:paddingRight="10dip" android:paddingLeft="8dip" android:id="@+id/lnSheduled">
+			<ImageView android:layout_height="50dip" android:layout_width="50dip" android:src="@drawable/icn_minimized"></ImageView>
+			<TextView  android:gravity="center|left" android:layout_width="fill_parent" android:padding="5dip" android:textSize="14sp" android:layout_height="fill_parent" android:textColor="#343434" android:text="Scheduled  (0)"></TextView>
+		</LinearLayout>
+	</LinearLayout>
+	<ListView android:id="@android:id/list" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content" android:padding="5dip" android:layout_margin="5dip"
+	android:background="@drawable/rounded_corner_bg"
+	android:clickable="true"
+	android:orientation="vertical" android:id="@+id/layoutResource">
+
+	<LinearLayout android:id="@+id/thumbnail" android:background="@drawable/image_background" android:padding="3dip"
+		android:layout_width="200dip" android:layout_height="200dip"
+		android:layout_alignParentTop="true" android:layout_margin="5dip">
+		<ImageView android:layout_margin="10dip"
+			android:layout_width="match_parent" android:layout_height="match_parent"
+			android:src="@drawable/img_advert_preview" android:id="@+id/imgPreview" android:gravity="center_vertical"/>
+	</LinearLayout>
+	<LinearLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:paddingLeft="5dip"
+		android:paddingRight="5dip" android:layout_gravity="center"
+		android:orientation="vertical">
+		<TextView android:layout_width="200dip"
+			android:layout_height="wrap_content" android:textColor="#696969"
+			android:textSize="12sp" android:layout_marginTop="1dip"
+			android:singleLine="false" android:maxLines="4" 
+			android:text="Apple iPhone 4S review" android:layout_gravity="center"
+			android:id="@+id/text1" />
+		<TextView android:textStyle="bold" android:layout_marginTop="1dip"
+			android:textSize="12sp" android:layout_height="wrap_content"
+			android:textColor="#b22222" android:layout_width="wrap_content"
+			android:text="Video" android:id="@+id/text2" android:layout_gravity="center"/>
+	</LinearLayout>
+</LinearLayout>

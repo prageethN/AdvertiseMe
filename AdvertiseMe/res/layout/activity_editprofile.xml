@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2011 Wglxy.com Licensed under the Apache License, Version 
+	2.0 (the "License"); you may not use this file except in compliance with 
+	the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+	<LinearLayout style="@style/TitleBar">
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_home" android:src="@drawable/title_home"
+			android:onClick="onClickHome" />
+
+		<ImageView style="@style/TitleBarSeparator" />
+		<TextView style="@style/TitleBarText" />
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_about" android:src="@drawable/title_about"
+			android:onClick="onClickAbout" />
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_search" android:src="@drawable/title_search"
+			android:onClick="onClickSearch" />
+	</LinearLayout>
+	<LinearLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="30dip"
+		android:paddingBottom="5dip" android:background="@drawable/img_header_bg">
+
+		<TextView android:id="@+id/txtHeader" android:paddingTop="5dip"
+			android:text="Enter your name" android:layout_width="wrap_content"
+			android:layout_height="fill_parent" android:textColor="@color/back_gray"
+			android:paddingLeft="10dip" android:textSize="12sp" />
+	</LinearLayout>
+	<RelativeLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_centerHorizontal="true"
+		android:paddingTop="10dip">
+		<EditText android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:id="@+id/txtCurrentPassword"
+			android:singleLine="false" android:maxLines="10"
+			 android:layout_margin="5dip"
+			android:hint="Current password" android:password="true"
+			android:visibility="gone">
+			<requestFocus></requestFocus>
+		</EditText>
+		<EditText android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:id="@+id/txtEditItem"
+			android:singleLine="false" android:maxLines="10"
+			android:layout_margin="5dip" android:layout_below="@+id/txtCurrentPassword">
+			<requestFocus></requestFocus>
+		</EditText>
+		<EditText android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:id="@+id/txtRepeatPassword"
+			android:singleLine="false" android:maxLines="10"
+			android:layout_below="@+id/txtEditItem" android:layout_margin="5dip"
+			android:hint="Repeat password" android:password="true"
+			android:visibility="gone">
+			<requestFocus></requestFocus>
+		</EditText>
+		<Spinner android:id="@+id/spCountryEdit" android:layout_below="@+id/txtRepeatPassword" android:entries="@array/user_country"
+			android:drawSelectorOnTop="true" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:visibility="gone"/>
+		<Spinner android:entries="@array/user_language" android:layout_below="@+id/spCountryEdit"
+			android:drawSelectorOnTop="true" android:layout_height="wrap_content"
+			android:layout_width="match_parent" android:id="@+id/spLanguageEdit" android:visibility="gone"/>
+		<LinearLayout android:layout_width="match_parent"
+			android:layout_below="@+id/spLanguageEdit" android:orientation="horizontal"
+			android:paddingTop="5dip" android:layout_height="wrap_content"
+			android:background="@color/gray_start">
+			<Button android:id="@+id/btnSave" android:layout_gravity="center"
+				android:layout_height="45dp" android:layout_width="match_parent"
+				android:text="Save" android:layout_weight="1" android:onClick="onClickSave" />
+			<Button android:id="@+id/btnCancel" android:layout_gravity="center"
+				android:layout_height="45dp" android:layout_width="match_parent"
+				android:text="Cancel" android:layout_weight="1" android:onClick="onClickCancel" />
+		</LinearLayout>
+	</RelativeLayout>
+
+</LinearLayout>

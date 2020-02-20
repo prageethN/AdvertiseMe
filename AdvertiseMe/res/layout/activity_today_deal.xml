@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2011 Wglxy.com Licensed under the Apache License, Version 
+	2.0 (the "License"); you may not use this file except in compliance with 
+	the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+	<LinearLayout style="@style/TitleBar">
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_home" android:src="@drawable/title_home"
+			android:onClick="onClickHome" />
+
+		<ImageView style="@style/TitleBarSeparator" />
+		<TextView style="@style/TitleBarText" />
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_about" android:src="@drawable/title_about"
+			android:onClick="onClickAbout" />
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_search" android:src="@drawable/title_search"
+			android:onClick="onClickSearch" />
+	</LinearLayout>
+	<LinearLayout android:paddingTop="6dip"
+		android:background="@color/back_gray" android:orientation="horizontal"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="match_parent" android:text="Today's Deals"
+			android:textSize="16sp" android:textColor="@color/white"
+			android:paddingLeft="6dip" android:singleLine="true" />
+	</LinearLayout>
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="vertical">
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:background="@drawable/selecter_row_favseller"
+			android:orientation="vertical" android:padding="5dip"
+			android:id="@+id/layoutProductDetailFeatures">
+
+			<TextView android:id="@+id/text1" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:gravity="center_vertical"
+				android:text="Deal of the Day" android:textStyle="bold"
+				android:layout_marginRight="1dip" android:textSize="14sp"
+				android:textColor="@color/dark_orange" />
+			<View android:background="@drawable/gradient_bg"
+				android:layout_width="fill_parent" android:layout_height="1dp"
+				android:layout_marginTop="5dip" android:id="@+id/divider" />
+		</LinearLayout>
+	</LinearLayout>
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:background="@drawable/selecter_row_favseller"
+		android:orientation="horizontal" android:padding="5dip" android:onClick="onClickTodayDeal" android:id="@+id/lnTodayDeal">
+
+		<!-- ListRow Left sied Thumbnail image -->
+		<LinearLayout android:id="@+id/thumbnail"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:padding="3dip" android:layout_alignParentLeft="true"
+			android:background="@drawable/image_background"
+			android:layout_marginRight="5dip">
+
+			<ImageView android:layout_width="60dip" android:layout_height="60dip"
+				android:src="@drawable/img" android:id="@+id/imgDailyDeal"/>
+
+		</LinearLayout>
+
+		<!-- Title Of Song -->
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_alignTop="@+id/thumbnail"
+			android:layout_toRightOf="@+id/thumbnail" android:singleLine="false"
+			android:maxLines="2" android:textColor="@color/back_gray"
+			android:textStyle="bold" android:textSize="14sp"
+			android:text="Apple iPhone 4S smartphone with all accessories" android:id="@+id/txtDailyDealName"/>
+
+		<!-- Seller feedback -->
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_below="@id/txtDailyDealName"
+			android:textColor="@color/back_gray" android:textSize="12sp"
+			android:layout_marginTop="1dip" android:layout_toRightOf="@+id/thumbnail"
+			android:text="List Price: LKR 98,000" android:id="@+id/txtListPrice"/>
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_below="@+id/txtListPrice"
+			android:textColor="@color/maroon" android:textSize="12sp"
+			android:textStyle="bold" android:layout_toRightOf="@+id/thumbnail"
+			android:layout_marginTop="1dip" android:text="Deal Price: LKR 72,000" android:id="@+id/txtSellPrice"/>
+	</RelativeLayout>
+	<View android:background="@drawable/gradient_bg"
+		android:layout_width="fill_parent" android:layout_height="1dp"
+		android:layout_marginTop="5dip" android:id="@+id/divider" />
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="vertical"
+		android:layout_marginTop="20dip">
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:background="@drawable/selecter_row_favseller"
+			android:orientation="vertical" android:padding="5dip"
+			android:id="@+id/layoutProductDetailFeatures">
+
+			<TextView android:id="@+id/text1" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:gravity="center_vertical"
+				android:text="Best Deals" android:textStyle="bold"
+				android:layout_marginRight="1dip" android:textSize="14sp"
+				android:textColor="@color/dark_orange" />
+			<View android:background="@drawable/gradient_bg"
+				android:layout_width="fill_parent" android:layout_height="1dp"
+				android:layout_marginTop="5dip" android:id="@+id/divider" />
+		</LinearLayout>
+		<ListView android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:id="@+id/lvBestDealList" />
+	</LinearLayout>
+</LinearLayout>

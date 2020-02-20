@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:background="@drawable/selecter_row_favseller"
+			android:orientation="horizontal" android:padding="5dip">
+
+			<!-- ListRow Left sied Thumbnail image -->
+			<LinearLayout android:id="@+id/thumbnail"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:padding="3dip" android:layout_alignParentLeft="true"
+				android:background="@drawable/image_background"
+				android:layout_marginRight="5dip">
+
+				<ImageView android:id="@+id/list_image"
+					android:layout_width="60dip" android:layout_height="60dip"
+					android:src="@drawable/img" />
+
+			</LinearLayout>
+
+			<!-- Title Of Song -->
+			<TextView android:id="@+id/text1" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_alignTop="@+id/thumbnail"
+				android:layout_toRightOf="@+id/thumbnail" android:singleLine="false"
+				android:maxLines="2" android:textColor="@color/back_gray"
+				android:textStyle="bold" android:textSize="14sp"
+				android:text="Save LKR 10,000 on a Galaxy Tab 2 10.1" />
+
+			<!-- Seller feedback -->
+			<TextView android:id="@+id/text2" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" android:layout_below="@id/text1"
+				android:textColor="@color/back_gray" android:textSize="12sp"
+				android:singleLine="false" android:maxLines="3"
+				android:layout_marginTop="1dip" android:layout_toRightOf="@+id/thumbnail"
+				android:text="@string/default_intro" />
+
+		</RelativeLayout>

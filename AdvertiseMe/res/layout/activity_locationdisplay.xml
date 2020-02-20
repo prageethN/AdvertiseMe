@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="match_parent"
+	android:background="@android:color/white" android:orientation="vertical">
+ <LinearLayout style="@style/TitleBar">
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_home"
+            android:src="@drawable/title_home"
+            android:onClick="onClickHome" />
+
+        <ImageView style="@style/TitleBarSeparator" />
+        <TextView style="@style/TitleBarText" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_about"
+            android:src="@drawable/title_about"
+            android:onClick="onClickAbout" />
+        <ImageButton style="@style/TitleBarAction"
+            android:contentDescription="@string/description_search"
+            android:src="@drawable/title_search"
+            android:onClick="onClickSearch" />
+    </LinearLayout>
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal" >
+		<Button android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_margin="5dip"
+			android:background="@drawable/ic_menu_more" android:id="@+id/btnSetRadious" />
+		<TextView android:text="Click to change radious" android:paddingRight="40dip"
+			android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<Button android:layout_width="wrap_content" android:onClick="onClickZoom"
+			android:layout_height="wrap_content" android:layout_margin="5dip" 
+			android:background="@drawable/ic_map_zoom_in" android:id="@+id/btnZoomIn" />
+		<Button android:layout_width="wrap_content" android:onClick="onClickZoom"
+			android:layout_height="wrap_content" android:layout_margin="5dip" 
+			android:background="@drawable/ic_map_zoom_out" android:id="@+id/btnZoomOut"/>
+	</LinearLayout>
+	<RelativeLayout android:orientation="vertical"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:weightSum="100">
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+			<com.google.android.maps.MapView
+				android:id="@+id/mapview" android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:clickable="true"
+				android:apiKey="0Sb24IfmhaFmUfjNSTtpBZoJ__HXTDh0dXYBN1A" />
+		</LinearLayout>
+
+		<HorizontalScrollView android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true">
+			<LinearLayout android:layout_width="match_parent"
+				android:layout_height="match_parent" android:orientation="horizontal">
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="match_parent" android:orientation="vertical"
+					android:layout_margin="5dip">
+					<Button android:id="@+id/btnFashion" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_gravity="center"
+						android:background="@drawable/ic_map_cloths" android:onClick="onClickCategory" />
+					<TextView android:text="Fashion" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:textColor="@android:color/white"
+						android:layout_gravity="center" />
+
+				</LinearLayout>
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="match_parent" android:orientation="vertical"
+					android:layout_margin="5dip">
+					<Button android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_gravity="center"
+						android:background="@drawable/ic_map_computer" android:id="@+id/btnComputer" />
+					<TextView android:text="Computers" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:textColor="@android:color/white"
+						android:layout_gravity="center" />
+
+				</LinearLayout>
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="match_parent" android:orientation="vertical"
+					android:layout_margin="5dip">
+					<Button android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_gravity="center"
+						android:background="@drawable/ic_map_deal" android:id="@+id/btnDeal" />
+					<TextView android:text="Deals" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:textColor="@android:color/white"
+						android:layout_gravity="center" />
+
+				</LinearLayout>
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="match_parent" android:orientation="vertical"
+					android:layout_margin="5dip">
+					<Button android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_gravity="center"
+						android:background="@drawable/ic_map_electronics" android:id="@+id/btnElectronic" />
+					<TextView android:text="Electronics" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:textColor="@android:color/white"
+						android:layout_gravity="center" />
+
+				</LinearLayout>
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="match_parent" android:orientation="vertical"
+					android:layout_margin="5dip">
+					<Button android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_gravity="center"
+						android:background="@drawable/ic_map_house" android:id="@+id/btnHouse" />
+					<TextView android:text="House" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:textColor="@android:color/white"
+						android:layout_gravity="center" />
+
+				</LinearLayout>
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="match_parent" android:orientation="vertical"
+					android:layout_margin="5dip">
+					<Button android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_gravity="center"
+						android:background="@drawable/ic_map_land" android:id="@+id/btnLand" />
+					<TextView android:text="Land" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:textColor="@android:color/white"
+						android:layout_gravity="center" />
+
+				</LinearLayout>
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="match_parent" android:orientation="vertical"
+					android:layout_margin="5dip">
+					<Button android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_gravity="center"
+						android:background="@drawable/ic_map_mobile" android:id="@+id/btnMobile" />
+					<TextView android:text="Mobile" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:textColor="@android:color/white"
+						android:layout_gravity="center" />
+
+				</LinearLayout>
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="match_parent" android:orientation="vertical"
+					android:layout_margin="5dip">
+					<Button android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_gravity="center"
+						android:background="@drawable/ic_map_rent" android:id="@+id/btnRent" />
+					<TextView android:text="Rent/Lend" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:textColor="@android:color/white"
+						android:layout_gravity="center" />
+
+				</LinearLayout>
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="match_parent" android:orientation="vertical"
+					android:layout_margin="5dip">
+					<Button android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_gravity="center"
+						android:background="@drawable/ic_map_rent_vehicle" android:id="@+id/btnRentVehicle" />
+					<TextView android:text="Rent car" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:textColor="@android:color/white"
+						android:layout_gravity="center" />
+
+				</LinearLayout>
+				<LinearLayout android:layout_width="match_parent"
+					android:layout_height="match_parent" android:orientation="vertical"
+					android:layout_margin="5dip">
+					<Button android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:layout_gravity="center"
+						android:background="@drawable/ic_map_vehicle" android:id="@+id/btnVehicle" />
+					<TextView android:text="Vehicle" android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:textColor="@android:color/white"
+						android:layout_gravity="center" />
+
+				</LinearLayout>
+			</LinearLayout>
+		</HorizontalScrollView>
+	</RelativeLayout>
+</LinearLayout>
+
+
+
+

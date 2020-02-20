@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/db1_root" android:orientation="vertical"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@color/white">
+	<LinearLayout style="@style/TitleBar">
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_about" android:src="@drawable/icn_slide_menu"
+			android:onClick="onClickSlideMenu" />
+		<ImageView style="@style/TitleBarLogo"
+			android:contentDescription="@string/description_logo" android:src="@drawable/title_logo" />
+
+		<ImageView style="@style/TitleBarSeparator" />
+		<TextView style="@style/TitleBarText" />
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_search" android:src="@drawable/title_search"
+			android:onClick="onClickSearch" />
+
+	</LinearLayout>
+	<LinearLayout android:paddingTop="6dip"
+		android:background="@color/back_gray" android:orientation="horizontal"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+		<ImageView android:paddingTop="2dip" android:layout_height="wrap_content"
+			android:src="@drawable/icn_user_online" android:layout_width="wrap_content" android:id="@+id/imgUserLoginStatus"></ImageView>
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="Prageeth Nuwan Gangabada"
+			android:textSize="24sp" android:textColor="@color/white"
+			android:paddingLeft="6dip" android:singleLine="true" android:id="@+id/txtFullName"/>
+
+	</LinearLayout>
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="100dip" android:background="@color/back_gray"
+		android:orientation="horizontal" android:padding="5dip">
+
+		<!-- ListRow Left sied Thumbnail image -->
+		<LinearLayout android:id="@+id/thumbnail"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:padding="3dip" android:layout_alignParentLeft="true"
+			android:background="@drawable/image_background"
+			android:layout_marginRight="5dip">
+
+			<ImageView android:layout_width="80dip" android:layout_height="90dip"
+				android:src="@drawable/img_default_user" android:id="@+id/imgProfilePicture"/>
+
+		</LinearLayout>
+
+		<!-- Title Of Song -->
+
+		<EditText android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:layout_alignTop="@+id/thumbnail"
+			android:layout_toRightOf="@+id/thumbnail"
+			android:text="Enter a message here to share with all of your contacts"
+			android:textColor="#343434" android:typeface="sans" android:textSize="12dip"
+			android:background="@drawable/rounded_edges" android:cursorVisible="false" 				
+    		android:editable="false"
+			android:lines="3" android:gravity="top" android:id="@+id/txtUserStatusMessage" android:maxLines="5" android:clickable="true"/>
+
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:layout_below="@id/txtUserStatusMessage"
+			android:layout_marginTop="1dip" android:layout_toRightOf="@+id/thumbnail"
+			android:paddingLeft="18dp" android:textColor="@color/white" android:textSize="16sp"
+			android:text="prageethmax87" android:background="@drawable/btncolor"
+			android:drawableRight="@drawable/nxt_icon" android:drawableLeft="@drawable/login_icn"
+			android:gravity="right|center_vertical" android:clickable="true" android:id="@+id/txtAdvertiseMeName" android:onClick="onClickUserName"/>
+
+
+
+	</RelativeLayout>
+	<LinearLayout android:paddingBottom="10dip"
+		android:paddingTop="6dip" android:background="@color/back_gray"
+		android:orientation="horizontal" android:layout_height="wrap_content"
+		android:layout_width="fill_parent">
+		<ImageView android:layout_height="wrap_content" android:src="@drawable/icn_location"
+			android:layout_width="wrap_content"></ImageView>
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:textSize="14sp"
+			android:text="Kandy,Central province,Sri Lanka" android:textColor="@color/white"
+			android:paddingLeft="6dip" android:id="@+id/txtUserLocation"/>
+
+	</LinearLayout>
+	<View android:id="@+id/divider" android:background="@drawable/gradient_bg"
+		android:layout_width="fill_parent" android:layout_height="6dp" />
+	<TableLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+	</TableLayout>
+
+	<ScrollView android:id="@+id/db1_root" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:background="@color/white">
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_weight="1" android:padding="6dip">
+
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_weight="1">
+				<Button android:id="@+id/home_btn_feature1" style="@style/PanelButton"
+					android:onClick="onClickFeature" android:text="@string/title_feature1"
+					android:drawableTop="@drawable/icn_panel_myam" />
+				<Button android:id="@+id/home_btn_feature2" style="@style/PanelButton"
+					android:onClick="onClickFeature" android:text="@string/title_feature2"
+					android:drawableTop="@drawable/icn_panel_search" />
+			</LinearLayout>
+
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_weight="1">
+				<Button android:id="@+id/home_btn_feature3" style="@style/PanelButton"
+					android:onClick="onClickFeature" android:text="@string/title_feature3"
+					android:drawableTop="@drawable/icn_panel_message" />
+				<Button android:id="@+id/home_btn_feature4" style="@style/PanelButton"
+					android:onClick="onClickFeature" android:text="@string/title_feature4"
+					android:drawableTop="@drawable/icn_panel_map" />
+			</LinearLayout>
+
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_weight="1">
+				<Button android:id="@+id/home_btn_feature5" style="@style/PanelButton"
+					android:onClick="onClickFeature" android:text="@string/title_feature5"
+					android:drawableTop="@drawable/icn_panel_favorite" />
+				<Button android:id="@+id/home_btn_feature6" style="@style/PanelButton"
+					android:onClick="onClickFeature" android:text="@string/title_feature6"
+					android:drawableTop="@drawable/icn_panel_deals" />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_weight="1">
+				<Button android:id="@+id/home_btn_feature7" style="@style/PanelButton"
+					android:onClick="onClickFeature" android:text="@string/title_feature7"
+					android:drawableTop="@drawable/icn_panel_profile" />
+				<Button android:id="@+id/home_btn_feature8" style="@style/PanelButton"
+					android:text="@string/title_feature8" android:onClick="onClickFeature"
+					android:drawableTop="@drawable/icn_panel_settings" />
+			</LinearLayout>
+
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

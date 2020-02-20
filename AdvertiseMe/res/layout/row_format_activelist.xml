@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:background="@drawable/selecter_row_favseller"
+	android:orientation="horizontal" android:padding="5dip">
+
+	<!-- ListRow Left sied Thumbnail image -->
+	<LinearLayout android:id="@+id/thumbnail"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:padding="3dip" android:layout_alignParentLeft="true"
+		android:background="@drawable/image_background"
+		android:layout_marginRight="5dip">
+
+		<ImageView android:id="@+id/list_image"
+			android:layout_width="60dip" android:layout_height="70dip"
+			android:src="@drawable/img" />
+
+	</LinearLayout>
+
+	<!-- Title Of Song -->
+	<TextView android:id="@+id/text1" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_alignTop="@+id/thumbnail"
+		android:layout_toRightOf="@+id/thumbnail" android:singleLine="false"
+		android:maxLines="2" android:textColor="@color/black"
+		android:textSize="14sp" android:text="Apple iPhone 4S smartphone with all accessories" />
+
+	<!-- Seller feedback -->
+	<TextView android:id="@+id/text2" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_below="@id/text1"
+		android:textColor="@color/back_gray" android:textSize="12sp"
+		android:layout_marginTop="1dip" android:layout_toRightOf="@+id/thumbnail"
+		android:text="Apple" />
+
+	<TextView android:id="@+id/text3" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@id/text2"
+		android:textColor="@color/maroon" android:textSize="12sp"
+		android:textStyle="bold" android:layout_toRightOf="@+id/thumbnail"
+		android:layout_marginTop="1dip" android:text="LKR 98,000" />
+<TextView android:id="@+id/text5" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_below="@id/text2"
+		android:textColor="@color/glossy_green" android:textSize="12sp" android:gravity="right" android:layout_marginRight="10dp"
+		android:layout_marginTop="1dip" android:layout_toRightOf="@+id/text3" android:layout_alignParentRight="true"
+		android:text="Active" />
+	<RatingBar android:id="@+id/ratingbar" style="?android:attr/ratingBarStyleSmall"
+		android:layout_below="@+id/text3" android:layout_toRightOf="@+id/thumbnail"
+		android:layout_marginTop="5dip" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_gravity="center_vertical"
+		android:rating="4" />
+	<TextView android:id="@+id/text4" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_below="@+id/text3"
+		android:textColor="@color/back_gray" android:textSize="12sp"
+		android:layout_toRightOf="@id/ratingbar" android:layout_marginTop="1dip"
+		android:layout_marginLeft="3dip" android:text="(153)" android:gravity="center_vertical"/>
+	<TextView android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:layout_below="@+id/ratingbar"
+		android:textColor="@color/darker_blue" android:textSize="14sp"
+		android:layout_toRightOf="@+id/thumbnail" 
+		android:layout_marginTop="10dip" android:gravity="center_vertical"
+		android:background="@drawable/selecter_darker_blue" android:text="More options"
+		android:drawableLeft="@drawable/icn_more_info" android:onClick="onClickMoreOption"
+		android:clickable="true" android:id="@+id/txtOptions"/>
+</RelativeLayout>

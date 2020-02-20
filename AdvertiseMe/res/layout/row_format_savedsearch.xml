@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:background="@drawable/selecter_row_favseller" 
+	android:orientation="horizontal" android:padding="5dip" android:id="@+id/layout_row">
+
+	<LinearLayout android:id="@+id/thumbnail"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:padding="5dip" android:layout_alignParentLeft="true"
+		android:layout_marginRight="5dip">
+
+
+		<CheckBox android:id="@+id/checkBox1" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:focusable="false"
+			android:gravity="center_vertical"
+			android:focusableInTouchMode="false" 
+			
+			/>
+
+	</LinearLayout>
+
+
+	<TextView android:id="@+id/text1" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:gravity="center_vertical"
+		android:layout_toRightOf="@+id/thumbnail" android:layout_toLeftOf="@+id/imgNew"
+		android:singleLine="false"
+		android:maxLines="3"
+		android:layout_alignBaseline="@+id/thumbnail" android:text="Apple iPhone 4S"
+		android:layout_marginRight="1dip" android:textSize="14sp"
+		android:textColor="#343434" android:layout_marginTop="20dp" />
+	<ImageView android:id="@+id/imgNew" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:src="@drawable/bg_new_white"
+		android:layout_toLeftOf="@+id/arrow" android:layout_centerVertical="true" 
+		/>
+
+	<ImageView android:id="@+id/arrow" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:src="@drawable/nxt_icon"
+		android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+
+
+
+</RelativeLayout>

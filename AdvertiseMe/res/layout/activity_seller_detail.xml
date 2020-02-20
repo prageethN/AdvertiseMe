@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2011 Wglxy.com Licensed under the Apache License, Version 
+	2.0 (the "License"); you may not use this file except in compliance with 
+	the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+	<LinearLayout style="@style/TitleBar">
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_home" android:src="@drawable/title_home"
+			android:onClick="onClickHome" />
+
+		<ImageView style="@style/TitleBarSeparator" />
+		<TextView style="@style/TitleBarText" />
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_about" android:src="@drawable/title_about"
+			android:onClick="onClickAbout" />
+		<ImageButton style="@style/TitleBarAction"
+			android:contentDescription="@string/description_search" android:src="@drawable/title_search"
+			android:onClick="onClickSearch" />
+	</LinearLayout>
+	<LinearLayout android:paddingTop="6dip"
+		android:background="@color/back_gray" android:orientation="horizontal"
+		android:layout_height="wrap_content" android:layout_width="fill_parent">
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="match_parent" android:text="Seller details"
+			android:textSize="16sp" android:textColor="@color/white"
+			android:paddingLeft="6dip" android:singleLine="true" />
+	</LinearLayout>
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:background="@drawable/selecter_row_favseller"
+		android:clickable="true" android:orientation="horizontal"
+		android:padding="5dip" android:id="@+id/lnCustomerProfile" android:onClick="onClickSellerProfile">
+
+		<!-- ListRow Left sied Thumbnail image -->
+		<LinearLayout android:id="@+id/thumbnail"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:padding="3dip" android:layout_alignParentLeft="true"
+			android:background="@drawable/image_background"
+			android:layout_marginRight="5dip">
+
+			<ImageView android:layout_width="50dip" android:layout_height="50dip"
+				android:src="@drawable/img" android:id="@+id/imgProfilePic"/>
+
+		</LinearLayout>
+
+		<!-- Title Of Song -->
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_alignTop="@+id/thumbnail"
+			android:layout_toRightOf="@+id/thumbnail" android:text="Apple Inc. (310)"
+			android:textColor="@color/black" android:textSize="18sp" android:id="@+id/txtSellerName"/>
+		<ImageView android:layout_width="25dip"
+			android:layout_height="25dip" android:src="@drawable/icn_yellow_star"
+			android:layout_toRightOf="@+id/txtSellerName" android:layout_above="@+id/text2" android:id="@+id/imgStar"/>
+		<!-- Seller feedback -->
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_below="@id/txtSellerName"
+			android:textColor="@color/back_gray" android:textSize="14sp"
+			android:layout_marginTop="1dip" android:layout_toRightOf="@+id/thumbnail"
+			android:text="99.7% positive feedback" android:id="@+id/txtPositiveFeedback"/>
+
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_below="@id/txtPositiveFeedback"
+			android:textColor="#343434" android:textSize="12sp"
+			android:layout_toRightOf="@+id/thumbnail" android:layout_marginTop="1dip"
+			android:text="Member since 2010" android:id="@+id/txtMembershpYear"/>
+
+		<ImageView android:id="@+id/imageview1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/icn_next_indicator"
+			android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+
+	</RelativeLayout>
+	
+	<View android:background="@drawable/gradient_bg"
+		android:layout_width="fill_parent" android:layout_height="0.5dp"
+		android:layout_margin="5dip" android:id="@+id/divider" />
+	<TextView android:id="@+id/text1" android:layout_width="wrap_content"
+		android:layout_height="30dip" android:gravity="center_vertical"
+		android:text="Average Customer Review" android:textStyle="bold"
+		android:layout_marginRight="1dip" android:textSize="14sp"
+		android:textColor="@color/dark_orange" android:padding="5dip"
+		android:layout_weight="0.80" />
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:background="@drawable/selecter_row_favseller"
+		android:orientation="horizontal" android:padding="5dip"
+		android:id="@+id/layoutCustomerRating">
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:id="@+id/layoutCustomerReviewSummary"
+			android:layout_below="@+id/txtReviewCount" android:paddingTop="5dip"
+			android:layout_marginRight="10dip">
+
+			<TableLayout android:layout_width="fill_parent"
+				android:layout_height="match_parent" android:layout_margin="10dip">
+				<TableRow android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:weightSum="1"
+					android:layout_margin="2dip">
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="Positive"
+						android:layout_marginRight="10dip" android:textColor="@color/glossy_green"/>
+					<TextView android:background="@color/blue_light"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:layout_weight="1" android:id="@+id/g_star_five" />
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="(100)"
+						android:layout_marginLeft="10dip" android:id="@+id/v_star_five" />
+				</TableRow>
+				<TableRow android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:weightSum="1"
+					android:layout_margin="2dip">
+					<TextView android:layout_width="wrap_content" android:textColor="@color/back_gray"
+						android:layout_height="wrap_content" android:text="Neutral"
+						android:layout_marginRight="10dip" />
+					<TextView android:background="@color/blue_light"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:layout_weight="1" android:id="@+id/g_star_four" />
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="(100)"
+						android:layout_marginLeft="10dip" android:id="@+id/v_star_four" />
+				</TableRow>
+				<TableRow android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:weightSum="1"
+					android:layout_margin="2dip">
+					<TextView android:layout_width="wrap_content" android:textColor="@color/red"
+						android:layout_height="wrap_content" android:text="Negative"
+						android:layout_marginRight="10dip" />
+					<TextView android:background="@color/blue_light"
+						android:layout_width="wrap_content" android:layout_height="wrap_content"
+						android:layout_weight="1" android:id="@+id/g_star_three" />
+					<TextView android:layout_width="wrap_content"
+						android:layout_height="wrap_content" android:text="(100)"
+						android:layout_marginLeft="10dip" android:id="@+id/v_star_three" />
+				</TableRow>
+			</TableLayout>
+		</LinearLayout>
+	</RelativeLayout>
+	<View android:background="@drawable/gradient_bg"
+		android:layout_width="fill_parent" android:layout_height="0.5dp"
+		android:layout_margin="5dip" android:id="@+id/divider" />
+<RelativeLayout android:background="@drawable/selecter_row_favseller"
+		android:clickable="true" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:orientation="horizontal"
+		android:onClick="onClickReviewSeller" android:id="@+id/lnReviewSeller">
+		<TextView android:id="@+id/text1" android:layout_width="wrap_content"
+			android:layout_height="30dip" android:gravity="center_vertical"
+			android:text="Review seller" android:textStyle="bold"
+			android:layout_marginRight="1dip" android:textSize="14sp"
+			android:textColor="@color/back_gray" android:padding="5dip"
+			android:layout_weight="0.80" />
+		<ImageView android:id="@+id/imageview1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/icn_next_indicator"
+			android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+	</RelativeLayout>
+	<View android:background="@drawable/gradient_bg"
+		android:layout_width="fill_parent" android:layout_height="0.5dp"
+		android:layout_margin="5dip" android:id="@+id/divider" />
+	<RelativeLayout android:background="@drawable/selecter_row_favseller"
+		android:clickable="true" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:orientation="horizontal"
+		android:onClick="onClickFeedback" android:id="@+id/lnRecentFeedback">
+		<TextView android:id="@+id/text1" android:layout_width="wrap_content"
+			android:layout_height="30dip" android:gravity="center_vertical"
+			android:text="View recent feedback" android:textStyle="bold"
+			android:layout_marginRight="1dip" android:textSize="14sp"
+			android:textColor="@color/back_gray" android:padding="5dip"
+			android:layout_weight="0.80" />
+		<ImageView android:id="@+id/imageview1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/icn_next_indicator"
+			android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+	</RelativeLayout>
+	<View android:background="@drawable/gradient_bg"
+		android:layout_width="fill_parent" android:layout_height="0.5dp"
+		android:layout_margin="5dip" android:id="@+id/divider" />
+
+	<RelativeLayout android:background="@drawable/selecter_row_favseller"
+		android:clickable="true" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:orientation="horizontal"
+		android:onClick="onClickOtherItems" android:id="@+id/lnOtherItems">
+		<TextView android:id="@+id/text1" android:layout_width="wrap_content"
+			android:layout_height="30dip" android:gravity="center_vertical"
+			android:text="View seller's other items" android:textStyle="bold"
+			android:layout_marginRight="1dip" android:textSize="14sp"
+			android:textColor="@color/back_gray" android:padding="5dip"
+			android:layout_weight="0.80" />
+		<ImageView android:id="@+id/imageview1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/icn_next_indicator"
+			android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+	</RelativeLayout>
+	<View android:background="@drawable/gradient_bg"
+		android:layout_width="fill_parent" android:layout_height="0.5dp"
+		android:layout_margin="5dip" android:id="@+id/divider" />
+
+	<RelativeLayout android:background="@drawable/selecter_row_favseller"
+		android:clickable="true" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:orientation="horizontal"
+		android:onClick="onClickExpand" android:id="@+id/lnAskQestion">
+		<TextView android:id="@+id/text1" android:layout_width="wrap_content"
+			android:layout_height="30dip" android:gravity="center_vertical"
+			android:text="Ask seller a question" android:textStyle="bold"
+			android:layout_marginRight="1dip" android:textSize="14sp"
+			android:textColor="@color/back_gray" android:padding="5dip"
+			android:layout_weight="0.80" />
+		<ImageView android:id="@+id/imageview1"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:src="@drawable/icn_next_indicator"
+			android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+	</RelativeLayout>
+	<View android:background="@drawable/gradient_bg"
+		android:layout_width="fill_parent" android:layout_height="0.5dp"
+		android:layout_margin="5dip" android:id="@+id/divider" />
+	<RelativeLayout android:background="@drawable/selecter_row_favseller"
+		android:clickable="true" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:orientation="horizontal"
+		android:onClick="onClickSaveSeller" android:id="@+id/lnSaveSeller">
+		<TextView android:id="@+id/txtSaveSeller" android:layout_width="wrap_content"
+			android:layout_height="30dip" android:gravity="center_vertical"
+			android:text="Save this seller" android:textStyle="bold"
+			android:layout_marginRight="1dip" android:textSize="14sp"
+			android:textColor="@color/back_gray" android:padding="5dip"
+			android:layout_weight="0.80" />
+	</RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="250dip" android:id="@+id/popup"
+	android:layout_height="wrap_content" android:background="@drawable/img_popup_background"
+	android:orientation="vertical">
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:layout_margin="10dip"
+		android:orientation="vertical">
+		<LinearLayout android:layout_width="match_parent" android:orientation="vertical"
+			android:layout_height="wrap_content" android:layout_gravity="right">
+			<Button android:background="@drawable/icn_window_close" android:layout_width="wrap_content" android:id="@+id/btnWindowClose" android:layout_height="wrap_content" android:layout_gravity="right"/>
+			
+		</LinearLayout>
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:textSize="18sp" android:textColor="@android:color/black"
+			android:text="Name of the place" android:id="@+id/txtTitle"/>
+		<TextView android:layout_marginTop="5dp" android:layout_width="wrap_content" android:singleLine="false" android:maxLines="5"
+			android:layout_height="wrap_content" android:text="Address of the place" android:textColor="@android:color/black" android:id="@+id/txtDescription"/>
+		<LinearLayout android:layout_width="match_parent" android:orientation="horizontal"
+			android:layout_height="wrap_content" android:weightSum="2">
+			<Button android:id="@+id/btnNavigate" android:layout_marginTop="10dp" 
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:text="Navigate" android:layout_weight="1" />
+			<Button android:id="@+id/btnViewItem" android:layout_marginTop="10dp"
+				android:layout_width="match_parent" android:layout_height="wrap_content"
+				android:text="View Item" android:layout_weight="1" />
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

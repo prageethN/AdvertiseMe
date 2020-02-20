@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	android:versionCode="1" android:versionName="1.0"
+	package="com.advertiseme.startpanel">
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<application android:theme="@style/Theme.D1" android:icon="@drawable/icn_app_icon"
+		android:label="@string/app_name">
+		<uses-library android:name="com.google.android.maps" />
+		<activity android:name="com.advertiseme.startup.StartupActivity"
+			android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.advertiseme.startup.SignInActivity"
+			android:label="@string/app_name" />
+		<activity android:name=".HomeActivity" android:label="@string/app_name" />
+		<activity android:name=".Feature1Activity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature1" />
+		<activity android:name=".Feature2Activity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature2" />
+		<activity android:name=".Feature3Activity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature3" />
+		<activity android:name=".Feature4Activity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature4" />
+		<activity android:name=".Feature5Activity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature5" />
+		<activity android:name=".Feature6Activity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature6" />
+		<activity android:name=".Feature7Activity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature7" />
+		<activity android:name=".Feature8Activity" android:theme="@style/Theme.D1"
+			android:label="@string/title_feature8" />
+		<activity android:name=".AboutActivity" android:theme="@style/Theme.D1"
+			android:label="@string/title_about" />
+		<activity android:name="com.advertiseme.startpanel.SearchActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_search" />
+		<activity android:name="com.advertiseme.startup.LoadingDialogActivity"
+			android:theme="@style/Theme.Transparent" />
+		<activity android:name="SlideMenuActivity" />
+		<activity android:theme="@style/Theme.D1"
+			android:name="com.advertiseme.startup.SignUpActivity" />
+		<activity android:name="com.adveriseme.category.CategoryListActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_category" />
+		<activity android:label="@string/title_dealbycategory"
+			android:name="com.advertiseme.deal.DealbyCategoryActivity"
+			android:theme="@style/Theme.D1" />
+		<activity android:name="com.advertiseme.advertisement.AdvertListActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_advertlist" >
+			
+			</activity>
+		<activity android:name="com.advertiseme.myadvertiseme.WishListActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_wishlist" />
+		<activity android:name="com.advertiseme.myadvertiseme.ActiveListActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_activelist" />
+		<activity android:name="com.advertiseme.myadvertiseme.OfferListActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_offer" />
+		<activity android:theme="@style/Theme.D1" android:label="@string/title_activelisting"
+			android:name="com.advertiseme.myadvertiseme.ActiveListingActivity" />
+		<activity android:theme="@style/Theme.D1" android:label="@string/title_bestoffer"
+			android:name="com.advertiseme.myadvertiseme.BestOfferListActivity" />
+		<activity android:theme="@style/Theme.D1" android:label="@string/title_expired"
+			android:name="com.advertiseme.myadvertiseme.ExpiredListActivity" />
+		<activity android:theme="@style/Theme.D1" android:label="@string/title_scheduled"
+			android:name="com.advertiseme.myadvertiseme.ScheduleListActivity" />
+		<activity android:theme="@style/Theme.D1" android:label="@string/title_inbox"
+			android:name="com.advertiseme.message.MessageInboxActivity" />
+		<activity android:theme="@style/Theme.D1" android:label="@string/title_saved"
+			android:name="com.advertiseme.message.MessageSavedMessageActivity" />
+		<activity android:theme="@style/Theme.D1" android:label="@string/title_sent"
+			android:name="com.advertiseme.message.MessageSentActivity" />
+		<activity android:theme="@style/Theme.D1" android:label="@string/title_recommendation"
+			android:name="com.advertiseme.recomendation.RecommendationActivity" />
+		<activity android:theme="@style/Theme.D1" android:label="@string/title_savedsearch"
+			android:name="com.advertiseme.search.SavedSearchActivity" />
+		<activity android:name="com.advertiseme.search.SearchPeopleActivity"
+			android:label="@string/title_findpeople" android:theme="@style/Theme.D1" />
+		<activity android:name="com.advertiseme.user.MyContactActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_mycontact" />
+		<activity android:name="com.advertiseme.user.ContactRequestActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_contactrequest" />
+		<activity android:name="com.advertiseme.user.EditProfileActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_updatevalue" />
+		<activity android:name="com.advertiseme.message.MessageActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_message" />
+		<activity android:name="com.advertiseme.message.ComposeMessageActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_compose" />
+		<activity android:name="com.advertiseme.message.AddReceiptantActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_addpeoeple" />
+		<activity android:name="com.advertiseme.advertisement.AdvertisementActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_advertisement" />
+		<activity android:name="com.advertiseme.nearby.LocationDisplayActivity"
+			android:label="@string/title_locationdispaly" android:theme="@android:style/Theme.NoTitleBar" />
+		<activity android:name="com.advertiseme.nearby.DistanceManager"
+			android:theme="@style/Theme.D1" android:label="@string/title_distancemanager" />
+		<activity android:label="@string/title_locationdispaly"
+			android:theme="@style/Theme.D1" android:name="com.advertiseme.nearby.LocationDisplayActivity" />
+		<activity android:name="com.advertiseme.nearby.MyMapLocationActivity"
+			android:theme="@style/Theme.D1" android:label="@string/title_feature4" />
+		<activity android:theme="@style/Theme.D1"
+			android:name="com.advertiseme.resource.ResourceActivity"
+			android:label="@string/title_resource" />
+		<activity android:label="@string/title_detail" android:theme="@style/Theme.D1"
+			android:name="com.advertiseme.advertisement.AdvertDetailActivity" />
+		<activity android:theme="@style/Theme.D1"
+			android:name="com.advertiseme.advertisement.CutomerReviewActivity"
+			android:label="@string/title_review">
+		</activity>
+		<activity android:label="@string/title_seller" android:theme="@style/Theme.D1"
+			android:name="com.advertiseme.seller.SellerDetailActivity" />
+		<activity android:label="@string/title_feedback"
+			android:theme="@style/Theme.D1" android:name="com.advertiseme.seller.SellerFeedbackActivity"></activity>
+		<activity android:label="@string/title_todaydeal"
+			android:theme="@style/Theme.D1" android:name="com.advertiseme.deal.TodayDealActivity"></activity>
+		<activity android:label="@string/title_dealdetail"
+			android:theme="@style/Theme.D1" android:name="com.advertiseme.deal.DealDetailActivity"></activity>
+		<activity android:label="@string/title_userprofile" android:name="com.advertiseme.user.UserProfileActivity" android:theme="@style/Theme.D1"></activity>
+		<activity android:theme="@style/Theme.D1" android:label="@string/title_webpage" android:name="com.advertiseme.web.WebpageOpenActivity"></activity>
+		<activity android:label="@string/title_views" android:theme="@style/Theme.D1" android:name="com.advertiseme.recent.UserViewsActivity"></activity>
+		<activity android:name="com.advertiseme.recent.UserActivityActivity" android:theme="@style/Theme.D1" android:label="@string/title_activity"></activity>
+		<activity android:theme="@style/Theme.D1" android:label="@string/title_buyer_offer" android:name="com.advertiseme.deal.BuyerDealActivity"></activity>
+		<activity android:name="com.advertiseme.support.LoadingActivity" android:theme="@style/Theme.D1"></activity>
+	</application>
+	<uses-sdk android:minSdkVersion="8" />
+
+</manifest> 
