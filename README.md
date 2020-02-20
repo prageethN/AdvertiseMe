@@ -12,3 +12,5 @@ When a particular advertiser needs to carry out more information about the produ
 
 By tracking the behaviors of the individual activities and using a data mining algorithm and collaborative filtering a unique profile could be provided for the each person (A hybrid data mining algorithm will have to be generated as suit for the context using existing algorithms) For an example if a particular person is interested in buying a property from near the Colombo metropolitan area, with intended details (Video clip of the property) suggestions can be provided.
 Furthermore users are allowed to rate and comment on the particular product or the service that he/she is viewed. These ratings and comments can be used for customer segmenting and product or service evaluations
+
+See screenshots : https://drive.google.com/open?id=14evWDPAjzl5EprQ1X6pUWCs9c4Wqcanw
